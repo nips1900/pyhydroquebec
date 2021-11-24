@@ -134,7 +134,7 @@ def main():
         async_func = list_contracts(client)
     elif args.dump_data:
         async_func = dump_data(client, hydro_contract)
-    elif args.detailled_energy is False:
+    elif args.detailled_energy is True:
         async_func = fetch_data(client, hydro_contract, args.hourly)
     else:
         start_date = datetime.strptime(args.start_date, '%Y-%m-%d')
