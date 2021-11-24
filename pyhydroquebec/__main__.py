@@ -58,7 +58,7 @@ async def list_contracts(client):
 async def fetch_data_detailled_energy_use(client, start_date, end_date):
     """Fetch hourly data for a given period."""
     # TODO
-    raise Exception("FIXME")
+    raise Exception("Fetch Data Detailled Energy Use between 2 dates- TO DO")
 
 
 def main():
@@ -134,7 +134,7 @@ def main():
         async_func = list_contracts(client)
     elif args.dump_data:
         async_func = dump_data(client, hydro_contract)
-    elif args.detailled_energy is True:
+    elif args.detailled_energy is False:
         async_func = fetch_data(client, hydro_contract, args.hourly)
     else:
         start_date = datetime.strptime(args.start_date, '%Y-%m-%d')
